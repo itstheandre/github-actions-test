@@ -1,0 +1,15 @@
+name: ACtions Worflow
+
+on: [push]
+
+jobs:
+  run-gh-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple JS Action
+        id: greet
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: André
+      - name: LOg Greeting Time
+        run: echo "${{steps.greet.outputs.time}}"
