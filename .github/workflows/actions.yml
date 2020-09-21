@@ -1,6 +1,6 @@
 name: ACtions Worflow
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   run-gh-actions:
